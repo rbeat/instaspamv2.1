@@ -2,17 +2,16 @@
 #!/usr/bin/env python3
 
 """ 
-Programı değiştirip bir yerde yayınlamadan önce lütfen
-bu programın GPLv3 lisansı altında olduğunu unutmayınız.
-Daha Fazla Bilgi:
-https://tr.wikipedia.org/wiki/GNU_Genel_Kamu_Lisans%C4%B1
+Before changing the program and posting it somewhere, please
+Please note that this program is under the GPLv3 license.
+More information:
 https://www.gnu.org/licenses/quick-guide-gplv3.html
 """
 
 __author__ = "Hichigo TurkHackTeam"
 __license__ = "GPLv3"
 __version__ = "2.1.0"
-__status__ = "Geliştiriliyor"
+__status__ = "WIP"
 
 
 
@@ -33,7 +32,7 @@ PROXIES = []
 def MultiThread(username, userid, loginuser, loginpass, proxy, reasonid):
     client = None
     if (proxy != None):
-        PrintStatus("[" + loginuser + "]", "Hesaba Giriş Yapılıyor!")
+        PrintStatus("[" + loginuser + "]", "Logging in . . .")
         client = InstaClient(
             loginuser,
             loginpass,
@@ -41,7 +40,7 @@ def MultiThread(username, userid, loginuser, loginpass, proxy, reasonid):
             proxy["port"]
         )
     else:
-        PrintStatus("[" + loginuser + "]", "Hesaba Giriş Yapılıyor!")
+        PrintStatus("[" + loginuser + "]", "Logging in w/o proxy . . .")
         client = InstaClient(
             loginuser,
             loginpass,
@@ -59,7 +58,7 @@ def NoMultiThread():
         client = None
         if (useproxy):
             proxy = choice(PROXIES)
-            PrintStatus("[" + user["user"] + "]", "Hesaba Giriş Yapılıyor!")
+            PrintStatus("[" + user["user"] + "]", "Logging in . . .")
             client = InstaClient(
                 user["user"],
                 user["password"],
@@ -68,7 +67,7 @@ def NoMultiThread():
             )
         else:
             proxy = choice(PROXIES)
-            PrintStatus("[" + user["user"] + "]", "Hesaba Giriş Yapılıyor!")
+            PrintStatus("[" + user["user"] + "]", "Logging in w/o proxy . . .")
             client = InstaClient(
                 user["user"],
                 user["password"],
@@ -84,40 +83,40 @@ def NoMultiThread():
 
 if __name__ == "__main__":
     PrintBanner()
-    PrintStatus("Kullanıcılar yükleniyor!")
+    PrintStatus("Users are being loaded . . .")
     USERS = LoadUsers("./kullanicilar.txt")
-    PrintStatus("Proxler yükleniyor!")
+    PrintStatus("Proxies are being loaded . . .")
     PROXIES = LoadProxies("./proxyler.txt")
     print("")
 
-    username = GetInput("Şikayet etmek istediğiniz hesap kullanıcı adı:")
-    userid = GetInput("Şikayet etmek istediğiniz hesap numarası:")
-    useproxy = GetInput("Proxy kullanmak ister misin? [Evet/Hayır]:")
-    if (useproxy == "Evet"):
+    username = GetInput("Username of the account you want to report:")
+    userid = GetInput("Account number you want to report:")
+    useproxy = GetInput("Do you want to use a proxy? [y/n]:")
+    if (useproxy == "y" || useproxy == "Y"):
         useproxy = True
-    elif (useproxy == "Hayır"):
+    elif (useproxy == "n" || useproxy == "N"):
         useproxy = False
     else:
-        PrintFatalError("Lütfen sadece 'Evet' yada 'Hayır' girin!")
+        PrintFatalError("Please just enter 'y' or 'n'!")
         exit(0)
-    usemultithread = GetInput("Multithreading kullanmak ister misin? [Evet/Hayır] (Çok fazla kullanıcınız varsa veya bilgisayarınız yavaşsa bu özelliği kullanmayın!):")
+    usemultithread = GetInput("Do you want to use multithreading? [y/n] (Don't use this feature if you have a lot of users or your computer is slow!):")
     
-    if (usemultithread == "Evet"):
+    if (usemultithread == "y" || usemultithread == "Y"):
         usemultithread = True
-    elif (usemultithread == "Hayır"):
+    elif (usemultithread == "n" || usemultithread == "N"):
         usemultithread = False
     else:
-        PrintFatalError("Lütfen sadece 'Evet' yada 'Hayır' girin!")
+        PrintFatalError("Please just enter 'y' or 'n'!")
         exit(0)
     
     PrintChoices()
-    reasonid = GetInput("Lütfen üstteki şikayet nedenlerinden birini seçin (örn: spam için 1):")
+    reasonid = GetInput("Please select one of the above complaint reasons (ex: 1 for spam):")
 
     
     
     
     print("")
-    PrintStatus("Başlıyor!")
+    PrintStatus("Starting!")
     print("")
 
     if (usemultithread == False):
