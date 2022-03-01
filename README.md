@@ -1,44 +1,42 @@
-# 🌙 THT Instagram SPAM Atıcı
+# 🌙 THT Instagram SPAM Shooter
 
-## 🔥 Nedir?
-Belirlediğiniz şikayet nedeni ile bir hesabp için instagrama şikayet isteği atmanızı sağlayan bir programdır.
+## 🔥 Что это?
+Это программа, которая позволяет отправить запрос жалобы в Instagram для учетной записи из-за указанной вами жалобы.
 
-**Programın videolarını çektiği için Akif kardeşime teşekkür ediyorum!**
+**Автор хотел бы поблагодарить своего брата Акифа за помощь в документировании!**
 
 ![Screenshot](https://github.com/tarik0/instaspamv2/blob/master/ss.png)
 
- ## 💻 Kurulum
+ ## 💻 Настройка
  
- [![Windows Kurulum](https://img.youtube.com/vi/XU6nJ__anaY/0.jpg)](https://www.youtube.com/watch?v=XU6nJ__anaY)
+ [![Настройка на Windows](https://img.youtube.com/vi/XU6nJ__anaY/0.jpg)](https://www.youtube.com/watch?v=XU6nJ__anaY)
  
  
- ## 🤔 Sıkça Sorulan Sorular
+ ## 🤔 Часто задаваемые вопросы
 
-### # Kullanıcıların ID'sini nereden bulabiliriz?
-[Buradaki](https://codeofaninja.com/tools/find-instagram-user-id) adresinden bulabilirsiniz.
-### # Spam atmama rağmen hesap kapanmadı?
+### # Где мы можем найти ID пользователя?
+Его можно найти [вот так](https://codeofaninja.com/tools/find-instagram-user-id).
+### # Аккаунт не закрывается, хотя я спамлю репортами!
 
-Hesapların **%100** kapanma garantisi **yoktur.**
+**Нет 100% гарантии** закрытия аккаунтов.
 
-### # Kullanıcılar doğru olduğu halde giriş yapılamıyor?
+### # Не удается войти в систему, хотя пользователи указаны правильно
 
-Hesaplarınız %90 doğrulamaya düşüyordur veya proxylerinizde sıkıntı vardır.
+Скорее всего, аккаунт заблокирован или есть проблема с вашим прокси.
 
-### # Kullanıcı dosyasını nasıl doldurmalıyım?
-Her satıra 1 kullanıcı olacak şekilde ve **kullanici_adi sifre** formatında yazmalısınız. **(Örn. necmi_selim 123sifre12)**
+### # Как я должен заполнить файл пользователя?
+Указывать нужно 1 пользователя в 1 строке, в формате **имя_пользователя<ПРОБЕЛ>пароль**. **(Например, necmi_selim 123sifre12)**
 
-### # Proxy dosyasını nasıl doldurmalıyım?
-Her satıra 1 proxy olacak şekilde ve **ip: port** formatında yazmalısınız. **(Örn. 1.1.1.1:8080)**
+### # Как мне заполнить файл прокси?
+Указывать нужно 1 прокси в 1 строке, в формате **ip:port**. **(Пример 1.1.1.1:8080)**
 
-### # Sürekli proxyler çalışmıyor hatası alıyorum?
-Programı proxy ile kullanmak zorunda değilsiniz. Instagram'ın bu olayını ben de tamamen çözebilmiş değilim.
+### # Я продолжаю получать ошибки по прокси-серверам
+Вам не обязательно использовать программу с прокси. Автор также не смог полностью решить эту проблему с Instagram.
 
-### # Proxy normalde çalıştığı halde programda çalışmıyor!
-Proxyleriniz **HTTPS** destekli olmalıdır aksi halde çalışmaz.
+### # Прокси работает нормально, а в программе - не работает!
+Прокси должны быть **HTTPS**, иначе программа не будет работать.
 
-## 📞 İletişim
-
-Forum dışındaki iletişim bilgilerim;
+## 📞 Связь с автором
 
 **Telegram:** @Hichigo06 
 **Instagram:** @hichigo.exe
@@ -46,11 +44,10 @@ Forum dışındaki iletişim bilgilerim;
 **akovskiniz Instagram:** @akifdora0
 **akovskiniz YouTube:**  [![Akif Dora](https://www.youtube.com/channel/UCxaifS9Pam5QDp1NE2SPXqA)]
 
-##  ⚖️ Lisans
+##  ⚖️ Лицензия
 
-Bu program **GPLv3** lisansı altındadır. Lütfen programı değiştirip kullanmadan önce alttaki bağlantıları okuyunuz!
+Эта программа находится под лицензией **GPLv3**. Пожалуйста, прочитайте ссылки ниже, прежде чем изменять и использовать программу!
 
-https://tr.wikipedia.org/wiki/GNU_Genel_Kamu_Lisans%C4%B1
 https://www.gnu.org/licenses/quick-guide-gplv3.html
 
-**Program ile yapacağınız herhangi bir işlemden ben sorumlu değilim. Bu riski göz önüne alarak kullanın.**
+**Я не несу ответственности за любые ваши действия с программой. Используйте с учетом этого риска.**
